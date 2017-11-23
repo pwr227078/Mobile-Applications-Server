@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @refuelling.description %>
+</p>
+
+<p>
+  <strong>Total price:</strong>
+  <%= @refuelling.total_price %>
+</p>
+
+<p>
+  <strong>Liters:</strong>
+  <%= @refuelling.liters %>
+</p>
+
+<p>
+  <strong>Mileage:</strong>
+  <%= @refuelling.mileage %>
+</p>
+
+<p>
+  <strong>Datetime:</strong>
+  <%= @refuelling.datetime %>
+</p>
+
+<%= link_to 'Edit', edit_refuelling_path(@refuelling) %> |
+<%= link_to 'Back', refuellings_path %>

@@ -1,0 +1,67 @@
+<%= form_with(model: petrol_station, local: true) do |form| %>
+  <% if petrol_station.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(petrol_station.errors.count, "error") %> prohibited this petrol_station from being saved:</h2>
+
+      <ul>
+      <% petrol_station.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :petrol_station_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :street %>
+    <%= form.text_field :street, id: :petrol_station_street %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :petrol_station_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :postal_code %>
+    <%= form.text_field :postal_code, id: :petrol_station_postal_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pb95_price %>
+    <%= form.text_field :pb95_price, id: :petrol_station_pb95_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pb98_price %>
+    <%= form.text_field :pb98_price, id: :petrol_station_pb98_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :on_price %>
+    <%= form.text_field :on_price, id: :petrol_station_on_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gas_price %>
+    <%= form.text_field :gas_price, id: :petrol_station_gas_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :likes %>
+    <%= form.text_field :likes, id: :petrol_station_likes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :unlikes %>
+    <%= form.text_field :unlikes, id: :petrol_station_unlikes %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

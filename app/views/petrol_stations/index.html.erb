@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Petrol Stations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Street</th>
+      <th>City</th>
+      <th>Postal code</th>
+      <th>Pb95 price</th>
+      <th>Pb98 price</th>
+      <th>On price</th>
+      <th>Gas price</th>
+      <th>Likes</th>
+      <th>Unlikes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @petrol_stations.each do |petrol_station| %>
+      <tr>
+        <td><%= petrol_station.name %></td>
+        <td><%= petrol_station.street %></td>
+        <td><%= petrol_station.city %></td>
+        <td><%= petrol_station.postal_code %></td>
+        <td><%= petrol_station.pb95_price %></td>
+        <td><%= petrol_station.pb98_price %></td>
+        <td><%= petrol_station.on_price %></td>
+        <td><%= petrol_station.gas_price %></td>
+        <td><%= petrol_station.likes %></td>
+        <td><%= petrol_station.unlikes %></td>
+        <td><%= link_to 'Show', petrol_station %></td>
+        <td><%= link_to 'Edit', edit_petrol_station_path(petrol_station) %></td>
+        <td><%= link_to 'Destroy', petrol_station, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Petrol Station', new_petrol_station_path %>

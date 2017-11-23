@@ -1,0 +1,2 @@
+class Refuelling < ApplicationRecord
+end

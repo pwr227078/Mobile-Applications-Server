@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  name: MyString
+  brand: MyString
+  model: MyString
+  registration_number: MyString
+  mileage: 1.5
+  fuel_type: MyString
+  review: 2017-11-23
+  oil_change: 2017-11-23
+  notifications_allowed: false
+
+two:
+  description: MyString
+  name: MyString
+  brand: MyString
+  model: MyString
+  registration_number: MyString
+  mileage: 1.5
+  fuel_type: MyString
+  review: 2017-11-23
+  oil_change: 2017-11-23
+  notifications_allowed: false

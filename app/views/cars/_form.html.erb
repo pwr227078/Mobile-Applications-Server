@@ -1,0 +1,67 @@
+<%= form_with(model: car, local: true) do |form| %>
+  <% if car.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(car.errors.count, "error") %> prohibited this car from being saved:</h2>
+
+      <ul>
+      <% car.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :car_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :car_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :brand %>
+    <%= form.text_field :brand, id: :car_brand %>
+  </div>
+
+  <div class="field">
+    <%= form.label :model %>
+    <%= form.text_field :model, id: :car_model %>
+  </div>
+
+  <div class="field">
+    <%= form.label :registration_number %>
+    <%= form.text_field :registration_number, id: :car_registration_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mileage %>
+    <%= form.text_field :mileage, id: :car_mileage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fuel_type %>
+    <%= form.text_field :fuel_type, id: :car_fuel_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :review %>
+    <%= form.date_select :review, id: :car_review %>
+  </div>
+
+  <div class="field">
+    <%= form.label :oil_change %>
+    <%= form.date_select :oil_change, id: :car_oil_change %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notifications_allowed %>
+    <%= form.check_box :notifications_allowed, id: :car_notifications_allowed %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

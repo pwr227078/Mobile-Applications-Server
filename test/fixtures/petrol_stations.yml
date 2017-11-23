@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  street: MyString
+  city: MyString
+  postal_code: MyString
+  pb95_price: 9.99
+  pb98_price: 9.99
+  on_price: 9.99
+  gas_price: 9.99
+  likes: 
+  unlikes: 
+
+two:
+  name: MyString
+  street: MyString
+  city: MyString
+  postal_code: MyString
+  pb95_price: 9.99
+  pb98_price: 9.99
+  on_price: 9.99
+  gas_price: 9.99
+  likes: 
+  unlikes: 
