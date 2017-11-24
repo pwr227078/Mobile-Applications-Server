@@ -1,0 +1,15 @@
+<% if logged_in? %>
+  <h1>You are already logged in</h1>
+<% else %>
+  <h1>Log in</h1>
+
+  <%= form_for(:session, url: login_path) do |f| %>
+    <%= f.label :mail %>
+    <%= f.email_field :mail, class: 'form-control' %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password, class: 'form-control' %>
+
+    <%= f.submit "Log in" %>
+  <% end %>
+<% end %>
